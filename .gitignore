@@ -1,0 +1,9 @@
+*.o
+*.a
+*#
+*~
+*.vgcore
+.vscode/
+a.out
+gmin.pl
+lem_in
