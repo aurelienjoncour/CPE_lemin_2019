@@ -2,7 +2,7 @@
 *.a
 *#
 *~
-*.vgcore
+vgcore.*
 .vscode/
 a.out
 gmin.pl
