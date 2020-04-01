@@ -17,35 +17,6 @@ static char ***end_error(char ***array_3d, char **line)
     return array_3d;
 }
 
-static bool check_error_line(ssize_t nread, char **line)
-{
-    if (nread == -1)
-        return true;
-    (*line)[nread - 1] = '\0';
-    if (!my_strlen(*line))
-        return true;
-    del_comments(*line);
-    return false;
-}
-
-static bool check_error_rooms(char **word_array, char ***array_3d)
-{
-    char *nb = "0123456789";
-
-    if (!allow_char(word_array[1], nb) || !allow_char(word_array[2], nb))
-        return true;
-    for (size_t i = 1; array_3d[i] != NULL; i++) {
-        if (word_array_len(array_3d[i]) != 3)
-            continue;
-        if (!my_strcmp(word_array[0], array_3d[i][0]))
-            return true;
-        if (!my_strcmp(word_array[1], array_3d[i][1]) &&
-            !my_strcmp(word_array[2], array_3d[i][2]))
-            return true;
-    }
-    return false;
-}
-
 static int parse_rooms(char **line, char ***array_3d, size_t index)
 {
     char **word_array = my_str_to_word_array(*line, " ");

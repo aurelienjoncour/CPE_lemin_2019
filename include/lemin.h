@@ -25,6 +25,8 @@ char ***get_rooms(FILE *stream, char ***array_3d, char **line);
 char ***get_tunnels(FILE *stream, char ***array_3d, char *line);
 int del_comments(char *line);
 char ***get_script(FILE *stream);
+bool check_error_line(ssize_t nread, char **line);
+bool check_error_rooms(char **word_array, char ***array_3d);
 
 //commands
 int interprate_commands(const char *line);

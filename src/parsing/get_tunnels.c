@@ -45,7 +45,7 @@ static char ***return_error_tunnels(char ***array_3d, char **word_array)
     return array_3d;
 }
 
-static int init_parse(char ***array_3d, char *line, int *index)
+static int init_parse(char ***array_3d, char *line, size_t *index)
 {
     *index = len_3d_array(array_3d);
     if (!my_strlen(line))
