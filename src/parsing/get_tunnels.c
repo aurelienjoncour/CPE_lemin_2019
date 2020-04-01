@@ -39,6 +39,21 @@ static bool check_error_tunnels(char ***array_3d, char **word_array, int end_roo
     return false;
 }
 
+static char ***return_error_tunnels(char ***array_3d, char **word_array)
+{
+    free_2d_array(word_array);
+    return array_3d;
+}
+
+static int init_parse(char ***array_3d, char *line, int *index)
+{
+    *index = len_3d_array(array_3d);
+    if (!my_strlen(line))
+        return EXIT_FAILURE;
+    del_comments_commands(line);
+    return EXIT_SUCCESS;
+}
+
 char ***get_tunnels(FILE *stream, char ***array_3d, char *line)
 {
     char **word_array = NULL;
@@ -46,18 +61,15 @@ char ***get_tunnels(FILE *stream, char ***array_3d, char *line)
     ssize_t nread = 0;
     size_t index = 0;
     int end_rooms = len_3d_array(array_3d);
+
     while (nread != -1) {
-        index = len_3d_array(array_3d);
-        if (!my_strlen(line))
+        if (init_parse(array_3d, line, &index))
             return array_3d;
-        del_comments_commands(line);
         if (!my_strlen(line))
             continue;
         word_array = my_str_to_word_array(line, "-\n");
-        if (check_error_tunnels(array_3d, word_array, end_rooms)) {
-            free_2d_array(word_array);
-            return array_3d;
-        }
+        if (check_error_tunnels(array_3d, word_array, end_rooms))
+            return return_error_tunnels(array_3d, word_array);
         array_3d[index] = word_array;
         array_3d = realloc_3d_array(array_3d);
         nread = getline(&line, &len, stream);
