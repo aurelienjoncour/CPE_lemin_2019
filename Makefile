@@ -11,7 +11,20 @@ INC_DIR		=	include/
 
 LIB_DIR		=	lib/my/
 
-SRC			=	$(SRC_DIR)main.c				\
+SRC			=	$(SRC_DIR)main.c								\
+				$(SRC_DIR)display_info.c						\
+				$(SRC_DIR)tools/word_array.c					\
+				$(SRC_DIR)tools/allowed_char.c					\
+				$(SRC_DIR)tools/3d_array.c						\
+				$(SRC_DIR)parsing/get_nb_ants.c					\
+				$(SRC_DIR)parsing/get_rooms.c					\
+				$(SRC_DIR)parsing/get_script.c					\
+				$(SRC_DIR)parsing/del_comments.c				\
+				$(SRC_DIR)parsing/get_tunnels.c					\
+				$(SRC_DIR)parsing/interprate_commands.c			\
+				$(SRC_DIR)chained_list/create_room.c			\
+				$(SRC_DIR)chained_list/connect_rooms.c			\
+				$(SRC_DIR)chained_list/realloc_room_t_array.c	\
 
 OBJ			=	$(SRC:.c=.o)
 
@@ -40,6 +53,7 @@ re:	fclean all
 run:	all
 	./$(NAME)
 
-debugs:	fclean all		gcc -o $(NAME) $(OBJ) $(LDLFLAGS) -g
+debugs: CFLAGS += -g
+debugs: re
 
 .PHONY: all clean fclean re run debugs
