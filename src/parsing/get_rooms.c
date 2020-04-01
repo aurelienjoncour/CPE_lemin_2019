@@ -37,7 +37,8 @@ static int parse_rooms(char **line, char ***array_3d, size_t index)
     return EXIT_SUCCESS;
 }
 
-static char ***init_array(char ***array_3d, size_t *index, ssize_t *nread, char **line)
+static char ***init_array(char ***array_3d, size_t *index, ssize_t *nread,
+char **line)
 {
     size_t len = 0;
 

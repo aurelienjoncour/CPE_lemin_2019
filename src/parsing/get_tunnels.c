@@ -11,7 +11,8 @@
 #include "my.h"
 #include "lemin.h"
 
-static bool check_exist_rooms(char ***array_3d, char **word_array, int end_rooms)
+static bool check_exist_rooms(char ***array_3d, char **word_array,
+int end_rooms)
 {
     int foo = 0;
 
@@ -29,7 +30,8 @@ static bool check_exist_rooms(char ***array_3d, char **word_array, int end_rooms
         return false;
 }
 
-static bool check_error_tunnels(char ***array_3d, char **word_array, int end_rooms)
+static bool check_error_tunnels(char ***array_3d, char **word_array,
+int end_rooms)
 {
     if (word_array_len(word_array) != 2)
         return true;
