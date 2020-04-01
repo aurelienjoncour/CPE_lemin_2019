@@ -15,7 +15,7 @@ SRC			=	$(SRC_DIR)main.c								\
 				$(SRC_DIR)display_info.c						\
 				$(SRC_DIR)tools/word_array.c					\
 				$(SRC_DIR)tools/allowed_char.c					\
-				$(SRC_DIR)tools/3d_array.c						\
+				$(SRC_DIR)tools/array_3d.c						\
 				$(SRC_DIR)parsing/get_nb_ants.c					\
 				$(SRC_DIR)parsing/get_rooms.c					\
 				$(SRC_DIR)parsing/get_script.c					\
