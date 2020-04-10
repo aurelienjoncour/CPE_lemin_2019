@@ -20,7 +20,8 @@ static int connect_next(room_t *link1, room_t *link2)
         link1->next[1] = NULL;
     } else {
         for (i = 0; link1->next[i] != NULL; i++);
-        if (realloc_room_t_array(link1->next, i + 2) == EXIT_FAILURE)
+        link1->next = realloc_room_t_array(link1->next, i + 2);
+        if (link1->next == NULL)
             return EXIT_FAILURE;
         link1->next[i] = link2;
         link1->next[i + 1] = NULL;
@@ -40,7 +41,8 @@ static int connect_previous(room_t *link1, room_t *link2)
         link2->previous[1] = NULL;
     } else {
         for (i = 0; link2->previous[i] != NULL; i++);
-        if (realloc_room_t_array(link2->previous, i + 2) == EXIT_FAILURE)
+        link2->previous = realloc_room_t_array(link2->previous, i + 2);
+        if (link2->previous == NULL)
             return EXIT_FAILURE;
         link2->previous[i] = link1;
         link2->previous[i + 1] = NULL;

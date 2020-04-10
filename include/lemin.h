@@ -17,7 +17,7 @@
 //chained_list
 room_t *create_room(char **script);
 int connect_rooms(room_t *link1, room_t *link2);
-int realloc_room_t_array(room_t **array_src, size_t size);
+room_t **realloc_room_t_array(room_t **array_src, size_t size);
 
 //parsing
 char **get_nb_ants(FILE *stream, char *line);
