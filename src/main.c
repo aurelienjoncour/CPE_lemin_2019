@@ -8,6 +8,27 @@
 #include "lemin.h"
 #include "my.h"
 
+/*
+Function de test de parcours du graph
+void print_link(room_t *link)
+{
+    if (link != NULL) {
+        printf("%s\n", link->label);
+    }
+}
+
+void display_room(room_t *room)
+{
+    print_link(room);
+    room->visited = true;
+    for (size_t i = 0; room->next[i] != NULL; i++) {
+        if (room->next[i] != NULL && !room->next[i]->visited) {
+            display_room(room->next[i]);
+        }
+    }
+}*/
+
+
 int main(void)
 {
     char ***array_3d = get_script(stdin);

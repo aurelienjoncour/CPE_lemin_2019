@@ -42,12 +42,6 @@ static int is_already_connected(room_t *room1, room_t *room2)
         if (my_strcmp(room1->next[i]->label, room2->label) == 0)
             return 1;
     }
-    if (room1->previous == NULL)
-        return -1;
-    for (int i = 0; room1->previous[i]; i++) {
-        if (my_strcmp(room1->previous[i]->label, room2->label) == 0)
-            return 1;
-    }
     return -1;
 }
 

@@ -15,11 +15,11 @@ room_t *create_room(char **script)
     if (room == NULL)
         return NULL;
     room->label = my_strdup(script[0]);
+    room->visited = false;
     if (room->label == NULL)
         return NULL;
     room->pos.x = my_getnbr(script[1]);
     room->pos.y = my_getnbr(script[2]);
     room->next = NULL;
-    room->previous = NULL;
     return room;
 }

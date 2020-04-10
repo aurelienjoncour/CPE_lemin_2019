@@ -12,8 +12,8 @@ typedef struct room_s {
     char *label;
     vector2i_t pos;
     int ants;
+    bool visited;
     struct room_s **next;
-    struct room_s **previous;
 }room_t;
 
 #endif /* !ROOM_T_H_ */
