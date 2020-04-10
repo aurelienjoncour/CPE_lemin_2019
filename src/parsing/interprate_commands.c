@@ -5,6 +5,7 @@
 ** interprate_commands
 */
 
+#include "lemin.h"
 #include "my.h"
 
 static const char *commands[] = {
