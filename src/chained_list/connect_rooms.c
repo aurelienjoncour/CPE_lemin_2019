@@ -5,7 +5,6 @@
 ** connect_rooms
 */
 
-#include <stdlib.h>
 #include "lemin.h"
 
 static int connect_next(room_t *link1, room_t *link2)

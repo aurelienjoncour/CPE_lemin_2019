@@ -5,8 +5,6 @@
 ** get_rooms
 */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "my.h"
 #include "lemin.h"
 

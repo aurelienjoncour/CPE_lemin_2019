@@ -5,8 +5,6 @@
 ** check_error_rooms
 */
 
-#include <stdlib.h>
-#include <stdbool.h>
 #include "lemin.h"
 #include "my.h"
 
@@ -14,7 +12,8 @@ bool check_error_line(ssize_t nread, char **line)
 {
     if (nread == -1)
         return true;
-    (*line)[nread - 1] = '\0';
+    if ((*line)[nread - 1] == '\n')
+        (*line)[nread - 1] = '\0';
     if (!my_strlen(*line))
         return true;
     del_comments(*line);

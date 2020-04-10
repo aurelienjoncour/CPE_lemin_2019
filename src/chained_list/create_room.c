@@ -5,7 +5,6 @@
 ** create_room
 */
 
-#include <stdlib.h>
 #include "my.h"
 #include "lemin.h"
 

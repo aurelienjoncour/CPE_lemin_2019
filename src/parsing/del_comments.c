@@ -5,7 +5,7 @@
 ** del_comments
 */
 
-#include <stdlib.h>
+#include "lemin.h"
 
 int del_comments(char *line)
 {

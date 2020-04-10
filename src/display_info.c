@@ -5,7 +5,6 @@
 ** display_info
 */
 
-#include <stdlib.h>
 #include "my.h"
 #include "lemin.h"
 

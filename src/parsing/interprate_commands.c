@@ -5,8 +5,6 @@
 ** interprate_commands
 */
 
-#include <stdlib.h>
-#include <stdbool.h>
 #include "my.h"
 
 static const char *commands[] = {

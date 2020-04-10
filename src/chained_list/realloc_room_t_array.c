@@ -5,7 +5,6 @@
 ** realloc_room_t_array
 */
 
-#include <stdlib.h>
 #include "lemin.h"
 
 room_t **realloc_room_t_array(room_t **array_src, size_t size)

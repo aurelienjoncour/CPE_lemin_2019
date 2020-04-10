@@ -5,9 +5,6 @@
 ** get_tunnels
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
 #include "my.h"
 #include "lemin.h"
 

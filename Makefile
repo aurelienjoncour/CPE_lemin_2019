@@ -11,24 +11,24 @@ INC_DIR		=	include/
 
 LIB_DIR		=	lib/my/
 
-SRC		=	$(SRC_DIR)main.c				\
-			$(SRC_DIR)display_info.c			\
-			$(SRC_DIR)tools/word_array.c			\
-			$(SRC_DIR)tools/allowed_char.c			\
-			$(SRC_DIR)tools/array_3d.c			\
-			$(SRC_DIR)parsing/get_nb_ants.c			\
-			$(SRC_DIR)parsing/get_rooms.c			\
-			$(SRC_DIR)parsing/get_script.c			\
-			$(SRC_DIR)parsing/del_comments.c		\
-			$(SRC_DIR)parsing/get_tunnels.c			\
-			$(SRC_DIR)parsing/interprate_commands.c		\
-			$(SRC_DIR)parsing/check_error_rooms.c		\
-			$(SRC_DIR)chained_list/create_room.c		\
-			$(SRC_DIR)chained_list/connect_rooms.c		\
+SRC		=	$(SRC_DIR)main.c								\
+			$(SRC_DIR)display_info.c						\
+			$(SRC_DIR)tools/word_array.c					\
+			$(SRC_DIR)tools/allowed_char.c					\
+			$(SRC_DIR)tools/array_3d.c						\
+			$(SRC_DIR)parsing/get_nb_ants.c					\
+			$(SRC_DIR)parsing/get_rooms.c					\
+			$(SRC_DIR)parsing/get_script.c					\
+			$(SRC_DIR)parsing/del_comments.c				\
+			$(SRC_DIR)parsing/get_tunnels.c					\
+			$(SRC_DIR)parsing/interprate_commands.c			\
+			$(SRC_DIR)parsing/check_error_rooms.c			\
+			$(SRC_DIR)chained_list/create_room.c			\
+			$(SRC_DIR)chained_list/connect_rooms.c			\
 			$(SRC_DIR)chained_list/realloc_room_t_array.c	\
-			$(SRC_DIR)rooms/create_rooms.c			\
-			$(SRC_DIR)get_lemin_info.c			\
-			$(SRC_DIR)rooms/get_nb_rooms.c			\
+			$(SRC_DIR)rooms/create_rooms.c					\
+			$(SRC_DIR)get_lemin_info.c						\
+			$(SRC_DIR)rooms/get_nb_rooms.c					\
 
 OBJ			=	$(SRC:.c=.o)
 

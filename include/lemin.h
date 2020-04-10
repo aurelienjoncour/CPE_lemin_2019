@@ -8,6 +8,7 @@
 #ifndef LEMIN_H_
 #define LEMIN_H_
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include "vector2i_t.h"

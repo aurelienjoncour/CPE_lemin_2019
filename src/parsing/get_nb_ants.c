@@ -5,9 +5,6 @@
 ** get_nb_ants
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
 #include "my.h"
 #include "lemin.h"
 

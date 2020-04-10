@@ -5,7 +5,6 @@
 ** main
 */
 
-#include <stdlib.h>
 #include "lemin.h"
 #include "my.h"
 

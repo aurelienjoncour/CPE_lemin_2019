@@ -5,7 +5,6 @@
 ** 3d_array
 */
 
-#include <stdlib.h>
 #include "lemin.h"
 
 size_t len_3d_array(char ***array)

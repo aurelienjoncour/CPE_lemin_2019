@@ -5,7 +5,6 @@
 ** Get lemin info
 */
 
-#include <stdlib.h>
 #include "lemin.h"
 #include "my.h"
 
