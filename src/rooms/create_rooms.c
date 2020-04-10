@@ -8,16 +8,19 @@
 #include "lemin.h"
 #include "my.h"
 
-static void create_all_the_room(char ***array3d, room_t **rooms_array)
+static int create_all_the_room(char ***array3d, room_t **rooms_array)
 {
     size_t pos = 0;
 
     for (size_t i = 0; array3d[i]; i++) {
         if (word_array_len(array3d[i]) == 3) {
             rooms_array[pos] = create_room(array3d[i]);
+            if (rooms_array[pos] == NULL)
+                return 84;
             pos++;
         }
     }
+    return EXIT_SUCCESS;
 }
 
 static room_t *get_room(char *room_name,
@@ -73,7 +76,8 @@ room_t **create_rooms(char ***array3d)
     size_t nb_rooms = get_nb_rooms(array3d);
     room_t **rooms_array = malloc(sizeof(room_t) * nb_rooms);
 
-    create_all_the_room(array3d, rooms_array);
+    if (create_all_the_room(array3d, rooms_array) == 84)
+        return NULL;
     rooms_array = connect_all_the_room(array3d, rooms_array, nb_rooms);
     return rooms_array;
 }
