@@ -16,7 +16,7 @@
 
 //chained_list
 room_t *create_room(char **script);
-int connect_links(room_t *link1, room_t *link2);
+int connect_rooms(room_t *link1, room_t *link2);
 int realloc_room_t_array(room_t **array_src, size_t size);
 
 //parsing
@@ -34,6 +34,7 @@ bool command_already_exist(char ***array, int index);
 void del_comments_commands(char *line);
 
 //lemin
+lemin_t *get_lemin_info(char ***array_3d, room_t **rooms_array);
 int display_info(char ***array);
 
 //word_array
@@ -49,5 +50,9 @@ size_t len_3d_array(char ***array);
 
 //tools
 bool allow_char(const char *script, const char *allow_char);
+
+//rooms
+room_t **create_rooms(char ***array3d);
+size_t get_nb_rooms(char ***array3d);
 
 #endif /* !LEMIN_H_ */
