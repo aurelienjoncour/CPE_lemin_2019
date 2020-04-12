@@ -31,8 +31,27 @@ static int display_rooms(char ***array)
     return 0;
 }
 
+static int check_end_start(char ***array, size_t index)
+{
+    int start = 0;
+    int end = 0;
+
+    for (size_t i = 0; i < index; i++) {
+        if (!my_strcmp(array[i][0], "##start"))
+            start++;
+        if (!my_strcmp(array[i][0], "##end"))
+            end++;
+    }
+    if (start != 1 || end != 1)
+        return 84;
+    else
+        return 0;
+}
+
 static int display_tunnels(char ***array, size_t index)
 {
+    if (check_end_start(array, index) == 84)
+        return 84;
     for (size_t i = index; array[i] != NULL; i++) {
         if (array[i][0] == NULL || array[i][1] == NULL)
             return 84;
