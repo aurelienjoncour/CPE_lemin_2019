@@ -22,6 +22,8 @@ lemin_t *get_lemin_info(char ***array_3d, room_t **rooms_array)
     lemin_t *lemin = malloc(sizeof(lemin_t));
     size_t nb_rooms = get_nb_rooms(array_3d);
 
+    if (rooms_array == NULL || lemin == NULL)
+        return NULL;
     lemin->nb_of_ants = my_getnbr(array_3d[0][0]);
     lemin->room_start = NULL;
     lemin->room_end = NULL;

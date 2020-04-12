@@ -70,6 +70,8 @@ room_t **create_rooms(char ***array3d)
     size_t nb_rooms = get_nb_rooms(array3d);
     room_t **rooms_array = malloc(sizeof(room_t) * nb_rooms);
 
+    if (rooms_array == NULL)
+        return NULL;
     if (create_all_the_room(array3d, rooms_array) == 84)
         return NULL;
     rooms_array = connect_all_the_room(array3d, rooms_array, nb_rooms);
