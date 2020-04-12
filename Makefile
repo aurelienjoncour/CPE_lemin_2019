@@ -21,6 +21,7 @@ SRC		=	$(SRC_DIR)main.c								\
 			$(SRC_DIR)parsing/get_script.c					\
 			$(SRC_DIR)parsing/del_comments.c				\
 			$(SRC_DIR)parsing/get_tunnels.c					\
+			$(SRC_DIR)parsing/get_tunnels_error.c			\
 			$(SRC_DIR)parsing/interprate_commands.c			\
 			$(SRC_DIR)parsing/check_error_rooms.c			\
 			$(SRC_DIR)chained_list/create_room.c			\

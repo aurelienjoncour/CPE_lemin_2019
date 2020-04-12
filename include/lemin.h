@@ -28,6 +28,9 @@ int del_comments(char *line);
 char ***get_script(FILE *stream);
 bool check_error_line(ssize_t nread, char **line);
 bool check_error_rooms(char **word_array, char ***array_3d);
+char ***return_error_tunnels(char ***array_3d, char **word_array);
+bool check_error_tunnels(char ***array_3d, char **word_array,
+int end_rooms);
 
 //commands
 int interprate_commands(const char *line);
