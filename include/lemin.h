@@ -14,6 +14,7 @@
 #include "vector2i_t.h"
 #include "room_t.h"
 #include "lemin_t.h"
+#include "ant_t.h"
 
 //chained_list
 room_t *create_room(char **script);
@@ -59,5 +60,9 @@ bool allow_char(const char *script, const char *allow_char);
 //rooms
 room_t **create_rooms(char ***array3d);
 size_t get_nb_rooms(char ***array3d);
+
+//resolve
+void compute_end_distance(room_t **rooms_array, lemin_t *lemin);
+void move_ants(lemin_t *lemin, ant_t *ants);
 
 #endif /* !LEMIN_H_ */

@@ -1,0 +1,15 @@
+resolve/compute_end_distance.c:        if (rooms_array[i] != lemin->room_end)
+resolve/compute_end_distance.c:    for (size_t i = 0; i < lemin->nb_rooms; i++)
+resolve/compute_end_distance.c:    set_distance(rooms_array, lemin, lemin->nb_rooms);
+resolve/compute_end_distance.c:    get_all_distance(rooms_array, lemin->nb_rooms, 0);
+get_lemin_info.c:    lemin->nb_of_ants = my_getnbr(array_3d[0][0]);
+get_lemin_info.c:    lemin->room_start = NULL;
+get_lemin_info.c:    lemin->room_end = NULL;
+get_lemin_info.c:    lemin->nb_rooms = get_nb_rooms(array_3d);
+get_lemin_info.c:            lemin->room_start = find_room(array_3d[i + 1][0],
+get_lemin_info.c:            rooms_array, lemin->nb_rooms);
+get_lemin_info.c:            lemin->room_end = find_room(array_3d[i + 1][0],
+get_lemin_info.c:            rooms_array, lemin->nb_rooms);
+get_lemin_info.c:    if (lemin->room_start == NULL || lemin->room_end == NULL)
+check_end.c:    if (explore_graph(lemin->room_start, lemin->room_end) == EXIT_FAILURE)
+check_end.c:    for (int i = 0; i < lemin->nb_rooms; i++)

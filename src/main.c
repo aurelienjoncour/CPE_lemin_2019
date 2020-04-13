@@ -28,6 +28,18 @@ void display_room(room_t *room)
     }
 }*/
 
+static void pathfinding(room_t **rooms_array, lemin_t *lemin)
+{
+    ant_t *ants = malloc(sizeof(ant_t) * lemin->nb_of_ants);
+
+    for (int i = 0; i < lemin->nb_of_ants; i++) {
+        ants[i].nb = i + 1;
+        ants[i].current_room = lemin->room_start;
+    }
+    compute_end_distance(rooms_array, lemin);
+    my_putstr("#moves\n");
+    move_ants(lemin, ants);
+}
 
 int main(void)
 {
@@ -46,7 +58,8 @@ int main(void)
     free_3d_array(array_3d);
     if (rooms_array == NULL || lemin == NULL)
         return 84;
-    if (!check_end(lemin, rooms_array))
-        return 84;
+//    if (!check_end(lemin, rooms_array))
+//        return 84;
+    pathfinding(rooms_array, lemin);
     return EXIT_SUCCESS;
 }

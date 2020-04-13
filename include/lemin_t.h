@@ -10,7 +10,7 @@
 
 typedef struct lemin_s {
     int nb_of_ants;
-    int nb_rooms;
+    size_t nb_rooms;
     struct room_s *room_start;
     struct room_s *room_end;
 }lemin_t;

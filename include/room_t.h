@@ -12,6 +12,7 @@ typedef struct room_s {
     char *label;
     vector2i_t pos;
     int ants;
+    int distance;
     bool visited;
     struct room_s **next;
 }room_t;

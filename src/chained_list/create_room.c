@@ -16,6 +16,7 @@ room_t *create_room(char **script)
         return NULL;
     room->label = my_strdup(script[0]);
     room->visited = false;
+    room->ants = 0;
     if (room->label == NULL)
         return NULL;
     room->pos.x = my_getnbr(script[1]);
