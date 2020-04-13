@@ -25,6 +25,8 @@ static int explore_graph(room_t *room, room_t *room_end)
 
 bool check_end(lemin_t *lemin, room_t **room_array)
 {
+    if (lemin->room_start->next == NULL)
+        return false;
     if (explore_graph(lemin->room_start, lemin->room_end) == EXIT_FAILURE)
         return false;
     for (size_t i = 0; i < lemin->nb_rooms; i++)
