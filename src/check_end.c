@@ -9,16 +9,18 @@
 
 static int explore_graph(room_t *room, room_t *room_end)
 {
+    int ret = EXIT_FAILURE;
+
     room->visited = true;
     for (size_t i = 0; room->next[i] != NULL; i++) {
         if (room->next[i] != NULL && !room->next[i]->visited) {
             if (room->next[i] == room_end) {
                 return EXIT_SUCCESS;
             }
-            return explore_graph(room->next[i], room_end);
+            ret = explore_graph(room->next[i], room_end);
         }
     }
-    return EXIT_FAILURE;
+    return ret;
 }
 
 bool check_end(lemin_t *lemin, room_t **room_array)
