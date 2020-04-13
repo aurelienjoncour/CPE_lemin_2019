@@ -13,6 +13,7 @@ LIB_DIR		=	lib/my/
 
 SRC		=	$(SRC_DIR)main.c								\
 			$(SRC_DIR)display_info.c						\
+			$(SRC_DIR)check_end.c							\
 			$(SRC_DIR)tools/word_array.c					\
 			$(SRC_DIR)tools/allowed_char.c					\
 			$(SRC_DIR)tools/array_3d.c						\

@@ -31,6 +31,7 @@ bool check_error_rooms(char **word_array, char ***array_3d);
 char ***return_error_tunnels(char ***array_3d, char **word_array);
 bool check_error_tunnels(char ***array_3d, char **word_array,
 int end_rooms);
+bool check_end(lemin_t *lemin, room_t **room_array);
 
 //commands
 int interprate_commands(const char *line);

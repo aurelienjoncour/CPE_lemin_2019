@@ -6,6 +6,7 @@
 */
 
 #include "lemin.h"
+#include "my.h"
 
 static bool check_exist_rooms(char ***array_3d, char **word_array,
 int end_rooms)

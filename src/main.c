@@ -34,7 +34,6 @@ int main(void)
     char ***array_3d = get_script(stdin);
     room_t **rooms_array = NULL;
     lemin_t *lemin = NULL;
-    int ret = 0;
 
     if (array_3d == NULL)
         return 84;
@@ -47,5 +46,7 @@ int main(void)
     free_3d_array(array_3d);
     if (rooms_array == NULL || lemin == NULL)
         return 84;
-    return ret;
+    if (!check_end(lemin, rooms_array))
+        return 84;
+    return EXIT_SUCCESS;
 }
