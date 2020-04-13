@@ -58,8 +58,8 @@ int main(void)
     free_3d_array(array_3d);
     if (rooms_array == NULL || lemin == NULL)
         return 84;
-//    if (!check_end(lemin, rooms_array))
-//        return 84;
+    if (!check_end(lemin, rooms_array))
+        return 84;
     pathfinding(rooms_array, lemin);
     return EXIT_SUCCESS;
 }
