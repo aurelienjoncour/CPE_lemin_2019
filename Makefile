@@ -33,6 +33,7 @@ SRC		=	$(SRC_DIR)main.c				\
 			$(SRC_DIR)rooms/get_nb_rooms.c			\
 			$(SRC_DIR)resolve/compute_end_distance.c	\
 			$(SRC_DIR)resolve/move_ants.c			\
+			$(SRC_DIR)resolve/display_result.c		\
 
 OBJ			=	$(SRC:.c=.o)
 

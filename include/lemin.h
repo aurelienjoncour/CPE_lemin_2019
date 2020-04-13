@@ -64,5 +64,7 @@ size_t get_nb_rooms(char ***array3d);
 //resolve
 void compute_end_distance(room_t **rooms_array, lemin_t *lemin);
 void move_ants(lemin_t *lemin, ant_t *ants);
+void display_result(bool first, int i, ant_t *ants, lemin_t *lemin);
+void print_movement(ant_t *ant, char *next_room_label);
 
 #endif /* !LEMIN_H_ */

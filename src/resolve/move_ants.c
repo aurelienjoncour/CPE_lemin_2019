@@ -8,14 +8,6 @@
 #include "lemin.h"
 #include "my.h"
 
-static void print_movement(ant_t *ant, char *next_room_label)
-{
-    my_putchar('P');
-    my_put_nbr(ant->nb);
-    my_putchar('-');
-    my_putstr(next_room_label);
-}
-
 static int move_ant_in_room(lemin_t *lemin, ant_t *ant, int next_room_nb)
 {
     if (ant->current_room->next[next_room_nb] != lemin->room_end)
@@ -48,6 +40,8 @@ static int move_ant(lemin_t *lemin, ant_t *ant)
     return EXIT_FAILURE;
 }
 
+
+
 void move_ants(lemin_t *lemin, ant_t *ants)
 {
     size_t ants_moved = 0;
@@ -63,12 +57,7 @@ void move_ants(lemin_t *lemin, ant_t *ants)
             print_movement(&ants[i - 1], ants[i - 1].current_room->label);
             break;
         }
-        if (first == false) {
-            print_movement(&ants[i - 1], ants[i - 1].current_room->label);
-            my_putchar(' ');
-        }
-        if (i == lemin->nb_of_ants - 1)
-            print_movement(&ants[i], ants[i].current_room->label);
+        display_result(first, i, ants, lemin);
         first = false;
     }
     if (ants_moved != 0) {
