@@ -40,8 +40,6 @@ static int move_ant(lemin_t *lemin, ant_t *ant)
     return EXIT_FAILURE;
 }
 
-
-
 void move_ants(lemin_t *lemin, ant_t *ants)
 {
     size_t ants_moved = 0;
